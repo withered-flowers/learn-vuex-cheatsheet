@@ -22,7 +22,7 @@ data pada sebuah file App atau "Component Utama" :grin:
     `Pick a linter / formatter config`, pilih yang ada opsi `ESLint + Prettier`
 
 ### How to VueX ?
-Dalam VueX sama dengan Vue, terbagi menjadi beberapa "methods" yang digunakan, mirip dengan
+Dalam VueX sama dengan Vue, terbagi menjadi beberapa "methods" yang digunakan, mirip dengan  
 `data, computed, dan watched` di Vue normal. di VueX umumnya terbagi menjadi 5 bagian besar:
 - State
 - Mutation
@@ -43,8 +43,8 @@ State.
 
 Rules of Thumb:
 - Mutation **TIDAK BOLEH** dipanggil secara langsung
-- Mutation umumnya bersifat **SYNCHRONOUS**, jangan gunakan hal hal bersifat asynchronous pada 
-  Mutation !
+- Mutation umumnya bersifat **SYNCHRONOUS**,   
+  jangan gunakan hal hal bersifat asynchronous pada Mutation !  
   (mis: Fetch data adalah Async jadi tidak boleh di Mutation, tapi ketika data sudah selesai  
   di-fetch, kemudian ingin dimasukkan ke State, maka sifatnya adalah synchronous, sehingga hal  
   tersebut bisa menjadi sebuah Mutation)
@@ -302,7 +302,18 @@ Sampai pada tahap ini kita sudah berhasil menggunakan State, Mutation, dan Actio
 ### Hint VueX
 - Harus mengetahui kapan menggunakan state, mutation, action, dan getter
 - Ingat bahwa vuex memiliki built in function untuk mempermudah hidup (`mapXXX`)
+- Jangan pernah menggunakan v-model untuk mengubah state !
+  (See BONUS pada referensi)
 
 ### TL;DR
 - Action akan memanggil Mutation untuk mengubah State.  
 - filtering data State dengan Getter.
+
+### Referensi
+- https://vuex.vuejs.org/
+- https://vuex.vuejs.org/guide/
+- https://vuex.vuejs.org/guide/state.html
+- https://vuex.vuejs.org/guide/mutations.html
+- https://vuex.vuejs.org/guide/actions.html
+- https://vuex.vuejs.org/guide/getters.html
+- [BONUS] https://vuex.vuejs.org/guide/forms.html
